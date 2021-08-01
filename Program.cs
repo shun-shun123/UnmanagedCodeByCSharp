@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
+using UnmanagedSample.SpanTutorial;
 
 namespace UnmanagedSample
 {
@@ -141,12 +142,21 @@ namespace UnmanagedSample
             // CheckAddressOfManagedAndUnmanaged();
             // ManipulatePointer();
             // DirectStructAccess();
-            StackAllocSample();
+            // StackAllocSample();
+            SpanUsage.ArrayAsSpan();
         }
     }
 
     class Data
     {
         public int Value;
+    }
+
+    public class SafeContextClass
+    {
+        public static void SafeStackAllocSampleBySpan()
+        {
+            Span<int> s = stackalloc int[5];
+        }
     }
 }
