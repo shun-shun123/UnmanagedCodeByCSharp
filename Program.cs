@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
+using BenchmarkDotNet.Running;
+using LinqBenchmark.Benchmark;
 using UnmanagedSample.SpanTutorial;
 
 namespace UnmanagedSample
@@ -143,7 +145,16 @@ namespace UnmanagedSample
             // ManipulatePointer();
             // DirectStructAccess();
             // StackAllocSample();
-            SpanUsage.ArrayAsSpan();
+            // SpanUsage.ArrayAsSpan();
+            // SpanUsage.VariousMemorySpace();
+            // var array = new byte[256];
+            // SpanUsage.ClearArrayAll(array);
+
+            var switcher = new BenchmarkSwitcher(new[]
+            {
+                typeof(SpanStringSubstring)
+            });
+            switcher.Run(args);
         }
     }
 
