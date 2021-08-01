@@ -141,6 +141,7 @@ namespace UnmanagedSample
             // CheckAddressOfManagedAndUnmanaged();
             // ManipulatePointer();
             // DirectStructAccess();
+            StackAllocSample();
         }
     }
 
