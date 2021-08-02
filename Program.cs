@@ -141,7 +141,7 @@ namespace UnmanagedSample
         
         static void Main(string[] args)
         {
-            // CheckAddressOfManagedAndUnmanaged();
+            CheckAddressOfManagedAndUnmanaged();
             // ManipulatePointer();
             // DirectStructAccess();
             // StackAllocSample();
@@ -154,7 +154,7 @@ namespace UnmanagedSample
             {
                 typeof(SpanStringSubstring)
             });
-            switcher.Run(args);
+            // switcher.Run(args);
         }
     }
 
